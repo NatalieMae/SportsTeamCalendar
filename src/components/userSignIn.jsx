@@ -7,15 +7,22 @@ function UserSignIn(){
 
     const [username, setUsername] = useState()
     const [userPassword, setUserPassword] = useState()
-    const goToMainPage = ()=>{
-
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+        console.log('submitted')
+    }
+    const handleData =()=> {
 
     }
 
+    
+
+
+    
     return( 
     
     <div>
-       <form method="POST" action="">
+       <form  action="" onSubmit = {handleSubmit}>
            <label htmlFor = "username">
                <p>Username</p>
                <input type="text" onChange = {e => setUsername(e.target.value)}  />
@@ -25,7 +32,7 @@ function UserSignIn(){
                <input type="password" onChange = {e => setUserPassword(e.target.value)} />
            </label>
            <br />
-           <input type="submit" value="Entry" onClick = {goToMainPage}/>
+           <input type="submit" value="Entry" />
 
         
        </form>
