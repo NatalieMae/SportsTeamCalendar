@@ -1,5 +1,9 @@
 .App {
+  margin: 0;
+  padding-left: 15, 15;
+  
   text-align: center;
+
 }
 
 .App-logo {
@@ -21,7 +25,13 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: blue;
+}
+
+.pretty-calendar {
+  margin: 0;
+  padding: 20%;
+  color: #25b3da;
 }
 
 .App-link {
