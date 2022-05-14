@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <header>
-        "Snack APP!"
+        ""
       </header>
       <main>
         <div className='pretty-calendar'>
