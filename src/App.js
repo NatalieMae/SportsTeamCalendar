@@ -3,6 +3,7 @@ import * as React from 'react';
 import Calendarview from './components/Calendarview';
 import Button from '@mui/material/Button';
 import './App.css';
+import Snack from './components/Snack'
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <main>
         <div className='pretty-calendar'>
           <Calendarview />
+          <Snack/>
         </div>
       </main>
       <Button variant='contained' color='primary' >
