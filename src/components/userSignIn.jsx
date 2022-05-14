@@ -6,7 +6,11 @@ import {useState, useEffect} from 'react';
 function UserSignIn(){
 
     const [username, setUsername] = useState()
-    const [password, setPassword] = useState()
+    const [userPassword, setUserPassword] = useState()
+    const goToMainPage = ()=>{
+
+
+    }
 
     return( 
     
@@ -14,14 +18,14 @@ function UserSignIn(){
        <form method="POST" action="">
            <label htmlFor = "username">
                <p>Username</p>
-               <input type="text" onChange = {e => setUsername(e.target.value)} required />
+               <input type="text" onChange = {e => setUsername(e.target.value)}  />
            </label>
-           <label htmlFor="password">
+           <label htmlFor="userPassword">
                <p>Password</p>
-               <input type="password" onChange = {e => setPassword(e.target.value)} required/>
+               <input type="password" onChange = {e => setUserPassword(e.target.value)} />
            </label>
            <br />
-           <input type="submit" value="Submit"/>
+           <input type="submit" value="Entry" onClick = {goToMainPage}/>
 
         
        </form>
@@ -32,5 +36,6 @@ function UserSignIn(){
 
    
 }
+
 
 export default UserSignIn;

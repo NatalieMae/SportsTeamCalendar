@@ -1,23 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 
 
 
 function UserSignUp(){
+
+    const [title, setTitle] = useState('Sign Up!')
+    const [subtitle, setSubTitle] = useState('Please fill out the form')
+
+    const handleSentFomMessage = ()=>{
+        setSubTitle('Your info has been sent!')
+    }
     return(
         <div>
 
             
             <main>
-                 <h1>Sign UP Information</h1>
-                    <form method="POST" action= "">
+                 <h1>{title}</h1>
+                 <h3>{subtitle}</h3>
+                    <form action= "">
                         <div >
                             <label htmlFor="firstName">First Name :</label>
-                            <input id="firstName" name="firstName" required />
+                            <input id="firstName" name="firstName"  />
                         </div>
                         <div>
                             <label htmlFor="lastName">Last Name :</label>
-                            <input type="text" id = 'lastName' name ="lastName" required />
+                            <input type="text" id = 'lastName' name ="lastName"  />
                         </div>
                         <div>
                             <label htmlFor="city">DOB:</label>
@@ -33,11 +41,15 @@ function UserSignUp(){
                         
                         <div>
                             <label htmlFor="userEmailAddress">Email :</label>
-                            <input type="userEmailAddress" id = 'userEmailAddress' name = 'userEmailAddress'required/>
+                            <input type="userEmailAddress" id = 'userEmailAddress' name = 'userEmailAddress'/>
+                        </div>
+                        <div>
+                            <label htmlFor="userPassword">Password</label>
+                            <input type="password" />
                         </div>
                     
                         <div>
-                        <input type="submit" value="Sign Up"/>
+                        <input type="submit" onClick={handleSentFomMessage} value="Sign Up"/>
                         </div>
 
                     </form>
