@@ -1,7 +1,7 @@
-import React from 'react';
-// import {Calendar as ReactCalendar} from 'react-calendar';
+import * as React from 'react';
+// import { ReactDOM } from 'react-dom';
 import Calendarview from './components/Calendarview';
-// import 'react-calendar/dis/Calendar.css';
+import Button from '@mui/material/Button';
 import './App.css';
 
 
@@ -16,6 +16,9 @@ function App() {
           <Calendarview />
         </div>
       </main>
+      <Button variant='contained' color='primary' >
+          {Date}
+      </Button>
     </div>
   );
 }

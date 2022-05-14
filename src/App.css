@@ -28,11 +28,21 @@
   color: blue;
 }
 
-.pretty-calendar {
+.react-calendar {
   margin: 0;
-  padding: 20%;
-  color: #25b3da;
 }
+
+
+.react-calendar__month-view__weekdays {
+  margin: 0;
+  padding: 10px 20px;
+  color: gray;
+}
+
+.react-calendar__navigation button {
+  font-size: 1em;
+}
+
 
 .App-link {
   color: #61dafb;
