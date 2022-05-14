@@ -1,6 +1,9 @@
 import React from 'react';
-import Calendar from 'react-calendar';
+// import {Calendar as ReactCalendar} from 'react-calendar';
+import Calendarview from './components/Calendarview';
+// import 'react-calendar/dis/Calendar.css';
 import './App.css';
+
 
 function App() {
   return (
@@ -10,7 +13,7 @@ function App() {
       </header>
       <main>
         <div className='pretty-calendar'>
-        <Calendar />
+          <Calendarview />
         </div>
       </main>
     </div>
