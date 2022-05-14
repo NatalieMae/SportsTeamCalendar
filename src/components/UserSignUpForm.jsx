@@ -34,15 +34,20 @@ function UserSignUp(){
                     <form action= "">
                         <div >
                             <label htmlFor="firstName">First Name :</label>
-                            <input id="firstName" name="firstName" onChange={handleData} />
+                            <input id="firstName" name="firstName" onChange={handleData} required/>
                         </div>
                         <div>
                             <label htmlFor="lastName">Last Name :</label>
-                            <input type="text" id = 'lastName' name ="lastName" onChange ={handleData} />
+                            <input type="text" id = 'lastName' name ="lastName" onChange ={handleData} required/>
                         </div>
                         <div>
                             <label htmlFor="DOB">Date of Birth:</label>
-                            <input id="DOB" type= "date" name="dob" onChange ={handleData} />
+                            <input id="DOB" type= "date" name="dob" onChange ={handleData} required/>
+                        </div>
+                        <div>
+                            <label htmlFor="childName">Your Child's Name:</label>
+                            <input type="text" name = 'childFirstName' onChange ={handleData}/>
+                            <input type="text" name = 'childLastName' onChange ={handleData} />
                         </div>
                         <label htmlFor="team"> Select Your Team</label>
                         <select name ='team' id='team' onChange ={handleData}>
