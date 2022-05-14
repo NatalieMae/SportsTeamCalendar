@@ -4,15 +4,17 @@ import Calendarview from './components/Calendarview';
 // import 'react-calendar/dis/Calendar.css';
 import './App.css';
 import Snack from './components/Snack'
+import Beverage from './components/Beverage'
 
 
 function App() {
   return (
-      <div className:''>
+      <div className=''>
       <main>
         <div className='pretty-calendar'>
           <Calendarview />
-          <Snack/>
+          <Snack />
+          <Beverage />
         </div>
       </main>
     </div>

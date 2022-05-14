@@ -6,12 +6,12 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 
-export default function Snack() {
+export default function Beverage() {
   const [state, setState] = React.useState({
-    oranges: true,
-    bananas: false,
-    apples: false,
-    watermelon: false,
+    water: true,
+    gatorade: false,
+    lemonade: false,
+    juice: false,
   });
 
   const handleChange = (event) => {
@@ -21,37 +21,37 @@ export default function Snack() {
     });
   };
 
-  const { oranges, bananas, apples, watermelon } = state;
-  const error = [oranges, bananas, apples, watermelon].filter((v) => v).length !== 1;
+  const { water, gatorade, lemonade, juice } = state;
+  const error = [water, gatorade, lemonade, juice].filter((v) => v).length !== 1;
 
   return (
     <Box sx={{ display: 'flex' }}>
       <FormControl sx={{ m: 3 }} component="fieldset" variant="standard">
-        <FormLabel component="legend">Pick One Snack</FormLabel>
+        <FormLabel component="legend">Pick One Beverage</FormLabel>
         <FormGroup>
           <FormControlLabel
             control={
-              <Checkbox checked={oranges} onChange={handleChange} name="oranges" />
+              <Checkbox checked={water} onChange={handleChange} name="water" />
             }
-            label="Oranges"
+            label="Water"
           />
           <FormControlLabel
             control={
-              <Checkbox checked={bananas} onChange={handleChange} name="bananas" />
+              <Checkbox checked={gatorade} onChange={handleChange} name="gatorade" />
             }
-            label="Bananas"
+            label="Gatorade"
           />
           <FormControlLabel
             control={
-              <Checkbox checked={apples} onChange={handleChange} name="apples" />
+              <Checkbox checked={lemonade} onChange={handleChange} name="lemonade" />
             }
-            label="Apples"
+            label="Lemonade"
           />
           <FormControlLabel
             control={
-              <Checkbox checked={watermelon} onChange={handleChange} name="watermelon" />
+              <Checkbox checked={juice} onChange={handleChange} name="juice" />
             }
-            label="Watermelon"
+            label="Juice"
           />
         </FormGroup>
         
@@ -64,5 +64,7 @@ export default function Snack() {
         variant="standard"
       />
     </Box>
+    
   );
+  
 }
