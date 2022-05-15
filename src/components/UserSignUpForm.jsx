@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 
 
 
+
 function UserSignUp(){
 
     const [title, setTitle] = useState('Sign Up!')
@@ -16,8 +17,6 @@ function UserSignUp(){
         setSignUpCredentials({[name]: value})
 
     }
-
-
 
 
 
@@ -36,19 +35,23 @@ function UserSignUp(){
                             <label htmlFor="firstName">First Name :</label>
                             <input id="firstName" name="firstName" onChange={handleData} required/>
                         </div>
+
                         <div>
                             <label htmlFor="lastName">Last Name :</label>
                             <input type="text" id = 'lastName' name ="lastName" onChange ={handleData} required/>
                         </div>
+
                         <div>
                             <label htmlFor="DOB">Date of Birth:</label>
                             <input id="DOB" type= "date" name="dob" onChange ={handleData} required/>
                         </div>
+
                         <div>
                             <label htmlFor="childName">Your Child's Name:</label>
                             <input type="text" name = 'childFirstName' onChange ={handleData}/>
                             <input type="text" name = 'childLastName' onChange ={handleData} />
                         </div>
+
                         <label htmlFor="team"> Select Your Team</label>
                         <select name ='team' id='team' onChange ={handleData}>
                                 <option value="Select">Select team</option>
@@ -61,16 +64,19 @@ function UserSignUp(){
                             <label htmlFor="userEmailAddress">Email :</label>
                             <input type="email" id = 'userEmailAddress' name = 'userEmailAddress' onChange ={handleData}/>
                         </div>
+
                         <div>
                             <label htmlFor="userName">Username</label>
                             <input type="password" name = "userName" onChange ={handleData} maxLength ={20} />
                         </div>
+                        
                         <div>
                             <label htmlFor="userPassword">Password</label>
                             <input type="password" name ="userPassword" onChange ={handleData} maxLength ={20} />
                         </div>
                     
                         <div>
+
                         <input type="submit" onClick={handleSentFomMessage} value="Sign Up"/>
                         </div>
 

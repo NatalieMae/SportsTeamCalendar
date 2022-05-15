@@ -1,11 +1,31 @@
-import React from 'react';
+import * as React from 'react';
 import {useState} from 'react';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 
+// export default function BasicTextFields() {
+//   return (
+//     
+//       
+//     </Box>
+//   );
+// }
 
 
 function UserSignIn(){
+
+// Button config
+
+<Stack spacing={2} direction="row"></Stack>
+// initial values
+const initialValues = {
+    userName : "",
+    userPassword :""
+}
 //get values from username & password
-    const [userCredentials, setUserCredentials] = useState({})
+    const [userCredentials, setUserCredentials] = useState(initialValues)
     const handleData =({target})=> {     
             
             const {name, value} = target
@@ -21,35 +41,47 @@ function UserSignIn(){
         console.log('not sent')
        
     }
-
-
-
-   
     
     return( 
-        
-    
-    <div>
-        
 
        <form  action="" onSubmit = {handleSubmit}>
-           <label htmlFor = "username">
-               <p>Username</p>
-                <input name = 'userName' type="text" onChange = {handleData} maxLength= {10} required />
-               <p>Password</p>
-                <input name = 'userPassword' type="password" onChange = {handleData} maxLength={20} required />
-           </label>
+        <Box  component="form"
+            sx={{
+                '& > :not(style)': { m: 1, width: '50ch' },
+            }}
+            noValidate
+            autoComplete="off"
+            >
+       <TextField id="outlined-basic" 
+       label="Username" 
+       variant="outlined"
+       name = 'userName'
+       type = 'text'
+       onChange = {handleData}
+       maxLength = {10}
+        />
 
+        <TextField id="outlined-basic" 
+       label="Password" 
+       variant="outlined"
+       name = 'userPassword'
+       type = 'password'
+       onChange = {handleData}
+       maxLength = {10}
+        />
+        </Box>
 
+        <br />
+        <Button variant="contained" type = "submit">
+               Entry
+        </Button>
+        
            
-           <br />
-           <input type="submit" value="Entry" />
 
         
        </form>
-        
-    </div>
     
+   
     )
 
    
