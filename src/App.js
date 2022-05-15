@@ -5,7 +5,6 @@ import UserSignUp from './components/UserSignUpForm';
 import UserSignIn from './components/userSignIn';
 // import {Calendar as ReactCalendar} from 'react-calendar';
 import Calendarview from './components/Calendarview';
-
 import Snack from './components/Snack'
 import Beverage from './components/Beverage'
 
