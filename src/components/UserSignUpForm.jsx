@@ -10,19 +10,16 @@ import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 
 
-// export default function BasicSelect() {
-//   const [age, setAge] = React.useState('');
-
-//   const handleChange = (event: SelectChangeEvent) => {
-//     setAge(event.target.value as string);
-//   };
 
 function UserSignUp(){
 
-    const [team, setTeam] = useState('');
+    // const [team, setTeam] = useState('');
 
-    const handleSelectedTeam = (e) => {
-        setTeam({team: e.target.value});
+    const handleSelectedTeam = ({target}) => {
+        const{value} =  target
+        // setTeam({team: value});
+        setSignUpCredentials({'team': value})
+        console.log(value)
         console.log('team selected')
     };
 
@@ -103,7 +100,7 @@ function UserSignUp(){
                             <Select
                             id="team"
                             label="Select Your Team"
-                            value = {team}
+                            value = 'team'
                             onChange={handleSelectedTeam}
                             >
                                 <MenuItem value= "team0"> --- </MenuItem>
