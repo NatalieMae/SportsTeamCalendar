@@ -102,11 +102,12 @@ function UserSignUp(){
                             label="Select Your Team"
                             value = 'team'
                             onChange={handleSelectedTeam}
+                            
                             >
-                                <MenuItem value= "team0"> --- </MenuItem>
-                                <MenuItem value= "team1">Team 1</MenuItem>
-                                <MenuItem value= "team2">Team 2</MenuItem>
-                                <MenuItem value= "team3">Team 3</MenuItem>
+                                <MenuItem value= "team_0"> --- </MenuItem>
+                                <MenuItem value= "team_1">Team 1</MenuItem>
+                                <MenuItem value= "team_2">Team 2</MenuItem>
+                                <MenuItem value= "team_3">Team 3</MenuItem>
                             </Select>
 
                        <h2>Select your user and password</h2>
@@ -127,7 +128,7 @@ function UserSignUp(){
                         maxLength = {10}
                         />
 
-                        <Button variant = 'contained' type="submit" >
+                        <Button variant = 'contained' type="submit" size = "large">
                             Sign Up
                         </Button>
                     

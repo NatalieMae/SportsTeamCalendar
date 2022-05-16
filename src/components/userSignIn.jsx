@@ -1,16 +1,12 @@
 import * as React from 'react';
 import {useState} from 'react';
 import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
 
 function UserSignIn(){
 
-// Button config
-
-<Stack spacing={2} direction="row"></Stack>
 
 // initial values
 const initialValues = {
@@ -62,14 +58,14 @@ const initialValues = {
        onChange = {handleData}
        maxLength = {10}
         />
-        </Box>
+       
 
         <br />
-        <Button variant="contained" type = "submit">
-               Entry
+        <Button variant="contained" type = "submit" size= "large">
+               Sign In
         </Button>
         
-           
+        </Box>    
 
         
        </form>
