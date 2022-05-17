@@ -29,8 +29,8 @@ function UserSignUp(){
 
             
             <main>
-                 <h1>{title}</h1>
-                 <h3>{subtitle}</h3>
+                <h1>{title}</h1>
+                <h3>{subtitle}</h3>
                     <form action= "">
                         <div >
                             <label htmlFor="firstName">First Name :</label>
