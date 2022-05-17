@@ -1,6 +1,14 @@
 import './App.css';
-import React from 'react';
 import PrimaryNavbar from './components/Navbar';
+import WelcomePage from './components/WelcomePage';
+import UserSignUp from './components/UserSignUpForm';
+import UserSignIn from './components/userSignIn';
+import React from 'react';
+// import {Calendar as ReactCalendar} from 'react-calendar';
+import Calendarview from './components/Calendarview';
+// import 'react-calendar/dis/Calendar.css';
+import Snack from './components/Snack'
+import Beverage from './components/Beverage'
 
 
 function App() {
@@ -9,16 +17,21 @@ function App() {
 
   return (
     <div>
+    <WelcomePage title = {welcomeTitle} />
+
+    <UserSignIn />
+    <UserSignUp />
       <div className=''>
       <main>
-        <div className='nav'>
+        <div className='pretty-calendar'>
+          <Calendarview />
+          <Snack />
+          <Beverage />
           <PrimaryNavbar />
         </div>
       </main>
-      </div>
     </div>
-  )
+  );
 }
 
 export default App;
-
