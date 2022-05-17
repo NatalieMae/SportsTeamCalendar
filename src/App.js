@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import PrimaryNavbar from './components/Navbar';
 import WelcomePage from './components/WelcomePage';
 import UserSignUp from './components/UserSignUpForm';
 import UserSignIn from './components/userSignIn';
@@ -15,6 +16,7 @@ function App() {
 
   return (
 
+
     <div>
     <main>
       <div className='pretty-calendar'>
@@ -24,8 +26,10 @@ function App() {
         <Calendarview />
         <Snack />
         <Beverage />
+        <PrimaryNavbar />
       </div>
     </main>
+
     </div>
   );
 }
