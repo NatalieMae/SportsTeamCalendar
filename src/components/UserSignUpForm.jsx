@@ -34,6 +34,7 @@ function UserSignUp(){
     }
    
     return(
+
         <main>
             <h1>Sign Up</h1>
             <h3>Please fill out the form</h3>
@@ -131,6 +132,7 @@ function UserSignUp(){
                         <Button variant = 'contained' type="submit" size = "large">
                             Sign Up
                         </Button>
+
                     
                     </Box>
                 </form>
