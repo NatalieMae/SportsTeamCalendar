@@ -10,6 +10,7 @@ import Snack from './components/Snack'
 import Beverage from './components/Beverage'
 
 
+
 function App() {
 
   const welcomeTitle = 'Welcome to the Food App'
@@ -20,13 +21,13 @@ function App() {
     <div>
     <main>
       <div className='pretty-calendar'>
+      <PrimaryNavbar />
         <WelcomePage title = {welcomeTitle} />
         <UserSignIn />
         <UserSignUp />
         <Calendarview />
         <Snack />
         <Beverage />
-        <PrimaryNavbar />
       </div>
     </main>
 
