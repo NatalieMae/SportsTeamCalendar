@@ -20,13 +20,13 @@ function App() {
     <div>
     <main>
       <div className='pretty-calendar'>
+        <PrimaryNavbar />
         <WelcomePage title = {welcomeTitle} />
         <UserSignIn />
         <UserSignUp />
         <Calendarview />
         <Snack />
         <Beverage />
-        <PrimaryNavbar />
       </div>
     </main>
 
