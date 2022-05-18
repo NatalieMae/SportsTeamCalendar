@@ -5,14 +5,13 @@ import {Calendar as ReactCalendar} from 'react-calendar';
 
 function Calendarview() {
 
-    // const [value, onChange ] = useState(new Date());
     const [date, setDate] = useState([
         new Date(),
     ]);
 
     return (
         <div className="pretty-calendar">
-        <h1 className="text-center">Team    Game Day Information</h1>
+        <h1 className="text-center">Team Game Day Information</h1>
         <div className="calendar-container">
             <ReactCalendar 
                 onChange={setDate} 
