@@ -16,8 +16,8 @@ import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['Snacks', 'Your Team', 'Create Team', 'Create Player', 'Events'];
+const settings = ['Profile', 'Sign Up', 'Sign In', 'Logout'];
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
