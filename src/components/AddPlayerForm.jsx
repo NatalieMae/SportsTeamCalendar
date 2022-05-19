@@ -6,8 +6,10 @@ import TextField from '@mui/material/TextField';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
+import { textTransform } from '@mui/system';
+import { TabletMacSharp } from '@mui/icons-material';
 
-
+const teams =['team1', 'team3']
 
 function AddPlayerForm(){
 
@@ -19,7 +21,11 @@ function AddPlayerForm(){
     };
 
     const [signUpCredentials, setSignUpCredentials] = useState({})
+    const [currentSelectedTeam, setCurrentSelectedTeam] = useState(null)
 
+    const handleTeamChange = (event)=>{
+        setCurrentSelectedTeam(event.target.value)
+    }
 
     const handleData=({target})=>{
         const{name,value} = target
@@ -70,14 +76,15 @@ function AddPlayerForm(){
                             <Select
                             id="team"
                             label="player_Team"
-                            value = 'team_1'
-                            onChange={handleSelectedTeam}
+                            value={currentSelectedTeam}
+                            onChange={handleTeamChange}
                             
                             >
-                                <MenuItem value= "team_0"> --- </MenuItem>
-                                <MenuItem value= "team_1">Team 1</MenuItem>
-                                <MenuItem value= "team_2">Team 2</MenuItem>
-                                <MenuItem value= "team_3">Team 3</MenuItem>
+                             {teams.map(team => (
+                                <MenuItem value={team}> {team} </MenuItem>
+
+                             ))}
+                            
                             </Select>
 
                         <Button variant = 'contained' type="submit" size = "large">
