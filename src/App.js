@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import PrimaryNavbar from './components/Navbar';
-import WelcomePage from './components/WelcomePage';
+// import WelcomePage from './components/WelcomePage';
 import UserSignUp from './components/UserSignUpForm';
 import UserSignIn from './components/userSignIn';
 // import {Calendar as ReactCalendar} from 'react-calendar';
@@ -10,25 +10,28 @@ import Snack from './components/Snack'
 import Beverage from './components/Beverage'
 
 
-
 function App() {
 
-  const welcomeTitle = 'Welcome to the Food App'
+  // const welcomeTitle = 'Welcome to the Food App'
 
   return (
 
 
-    <div>
+    <div className='App'>
     <main>
+      <div className='App-header'>
+        <PrimaryNavbar /> 
+        {/* <WelcomePage title = {welcomeTitle} /> */}
+        </div>
       <div className='pretty-calendar'>
-      <PrimaryNavbar />
-        <WelcomePage title = {welcomeTitle} />
-        <UserSignIn />
+      <Calendarview />
+      </div>
+      <UserSignIn />
         <UserSignUp />
-        <Calendarview />
+      <div className='snack-calendar'>
         <Snack />
         <Beverage />
-      </div>
+        </div>
     </main>
 
     </div>
@@ -36,3 +39,4 @@ function App() {
 }
 
 export default App;
+
