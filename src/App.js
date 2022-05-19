@@ -24,6 +24,7 @@ function App() {
         {/* <WelcomePage title = {welcomeTitle} /> */}
         </div>
       <div className='pretty-calendar'>
+        
       <Calendarview />
       </div>
       <UserSignIn />
