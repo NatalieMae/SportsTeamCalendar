@@ -1,7 +1,5 @@
 .App {
   margin: 0;
-  padding-left: 15, 15;
-  
   text-align: center;
 
 }
@@ -30,8 +28,10 @@
 
 .pretty-calendar {
   margin: 0;
-  padding: 20%;
+  padding: 10%;
   color: #25b3da;
+  /* background-image: url(./DevPics/IMG_0520.JPG); */
+  background-size:contain;
 }
 
 .App-link {
