@@ -50,26 +50,26 @@ function AddPlayerForm(){
                         <TextField id="First Name" 
                         label="First Name" 
                         variant="outlined"
-                        name = 'playerFirstName'
-                        type = 'text'
-                        onChange = {handleDataChange}
+                        name='playerFirstName'
+                        type='text'
+                        onChange={handleDataChange}
                         maxLength = {10}
                         />
                         
                         <TextField id="Last Name" 
                         label="Last Name" 
                         variant="outlined"
-                        name = 'playerLastName'
-                        type = 'text'
-                        onChange = {handleDataChange}
+                        name='playerLastName'
+                        type='text'
+                        onChange={handleDataChange}
                         maxLength = {10}
                         />
                         <TextField id="Date of Birth" 
                         label="Date of Birth" 
                         variant="outlined"
-                        name = "playerDOB"
-                        type = 'date'
-                        onChange = {handleDataChange}
+                        name="playerDOB"
+                        type='date'
+                        onChange={handleDataChange}
                         maxLength = {10}
                         />
 
