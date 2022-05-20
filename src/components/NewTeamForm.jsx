@@ -9,21 +9,25 @@ import TextField from '@mui/material/TextField';
 function NewTeamForm(){
 
 
-    const [newTeam, setNewTeam] = useState({})
+    const [newTeam, setNewTeam] = useState()
 
-
-    const handleData=({target})=>{
-        const{name,value} = target
-        console.log(name,value)
-        setNewTeam({[name]: value})
-
+    const handleNewTeam = (e)=>{
+        
+        console.log(e.targe.value)
+        setNewTeam(e.target.value)
     }
+    // const handleData=({target})=>{
+    //     const{name,value} = target
+    //     console.log(name,value)
+    //     setNewTeam({[name]: value})
+
+    // }
    
     return(
 
         <main>
             <h1>New Team</h1>
-            <h3>Please enter your team information</h3>
+            <h3>Please enter the new team name</h3>
                 <form action= "">
                     <Box  component="form"
                      sx={{
@@ -35,9 +39,9 @@ function NewTeamForm(){
                         <TextField id="New Team Name" 
                         label="Team Name" 
                         variant="outlined"
-                        name = 'newTeam'
+                        name='newTeam'
                         type = 'text'
-                        onChange = {handleData}
+                        onChange={handleNewTeam}
                         maxLength = {10}
                         />
                         <br />
