@@ -42,15 +42,10 @@ function NewTeamForm(){
                             Add Team
                         </Button>
 
-                    
                     </Box>
                 </form>
             </main>
-
-
-
-
-
+            
     )
     
 }
