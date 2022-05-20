@@ -6,33 +6,33 @@ import TextField from '@mui/material/TextField';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
-import { textTransform } from '@mui/system';
-import { TabletMacSharp } from '@mui/icons-material';
 
-const teams =['team1', 'team3']
+
+const teams =['None','team1','team2', 'team3', 'team4']
 
 function AddPlayerForm(){
 
-    const handleSelectedTeam = ({target}) => {
-        const{value} =  target
-        setSignUpCredentials({'team': value})
-        console.log(value)
-        console.log('team selected')
-    };
-
-    const [signUpCredentials, setSignUpCredentials] = useState({})
-    const [currentSelectedTeam, setCurrentSelectedTeam] = useState(null)
+    const [currentSelectedTeam, setCurrentSelectedTeam] = useState('None')
+    const [data, setData] = useState('none')
 
     const handleTeamChange = (event)=>{
         setCurrentSelectedTeam(event.target.value)
+        console.log(event.target.value)
+        
     }
 
-    const handleData=({target})=>{
-        const{name,value} = target
-        console.log(name,value)
-        setSignUpCredentials({[name]: value})
-
+    const handleDataChange = (event) =>{
+       setData(event.target.value)
+       console.log(event.target.value)
+       
     }
+
+    // const handleData=({target})=>{
+    //     const{name,value} = target
+    //     console.log(name,value)
+    //     setSignUpCredentials({[name]: value})
+
+    // }
    
     return(
 
@@ -52,15 +52,16 @@ function AddPlayerForm(){
                         variant="outlined"
                         name = 'playerFirstName'
                         type = 'text'
-                        onChange = {handleData}
+                        onChange = {handleDataChange}
                         maxLength = {10}
                         />
+                        
                         <TextField id="Last Name" 
                         label="Last Name" 
                         variant="outlined"
                         name = 'playerLastName'
                         type = 'text'
-                        onChange = {handleData}
+                        onChange = {handleDataChange}
                         maxLength = {10}
                         />
                         <TextField id="Date of Birth" 
@@ -68,7 +69,7 @@ function AddPlayerForm(){
                         variant="outlined"
                         name = "playerDOB"
                         type = 'date'
-                        onChange = {handleData}
+                        onChange = {handleDataChange}
                         maxLength = {10}
                         />
 
