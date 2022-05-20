@@ -8,20 +8,12 @@ import TextField from '@mui/material/TextField';
 
 function NewTeamForm(){
 
-
     const [newTeam, setNewTeam] = useState()
 
-    const handleNewTeam = (e)=>{
-        
-        console.log(e.targe.value)
+    const handleNewTeam =(e) =>{
         setNewTeam(e.target.value)
+        console.log(e.target.value)
     }
-    // const handleData=({target})=>{
-    //     const{name,value} = target
-    //     console.log(name,value)
-    //     setNewTeam({[name]: value})
-
-    // }
    
     return(
 
