@@ -17,7 +17,6 @@ function App() {
 
   return (
 
-
     <div>
     <main>
       <div className='pretty-calendar'>

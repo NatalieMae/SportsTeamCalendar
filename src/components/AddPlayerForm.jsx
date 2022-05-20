@@ -17,14 +17,12 @@ function AddPlayerForm(){
 
     const handleTeamChange = (event)=>{
         setCurrentSelectedTeam(event.target.value)
-        console.log(event.target.value)
-        
+        console.log(event.target.value)  
     }
 
     const handleDataChange = (event) =>{
        setData(event.target.value)
        console.log(event.target.value)
-       
     }
 
     // const handleData=({target})=>{
@@ -91,15 +89,10 @@ function AddPlayerForm(){
                         <Button variant = 'contained' type="submit" size = "large">
                             Add New Player
                         </Button>
-
                     
                     </Box>
                 </form>
             </main>
-
-
-
-
 
     )
     
