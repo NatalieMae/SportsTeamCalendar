@@ -5,13 +5,16 @@ import FormControl from '@mui/material/FormControl';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
+import BevImage from '../assets/images/bev-unsplash.jpg'
+
 
 export default function Snack() {
   const [state, setState] = React.useState({
-    oranges: true,    bananas: false,
+    oranges: false,    
+    bananas: false,
     apples: false,
     watermelon: false,
-    water: true,
+    water: false,
     gatorade: false,
     lemonade: false,
     juice: false,
@@ -29,6 +32,7 @@ export default function Snack() {
 
   return (
     <div className="snack-selection">
+      <p>Pick one snack and one beverage from the list below:</p>
       <Box sx={{ display: 'flex' }}>
         <FormControl sx={{ m: 3 }} component="fieldset" variant="standard">
           <FormLabel component="legend">Pick One Snack</FormLabel>
@@ -105,6 +109,10 @@ export default function Snack() {
           variant="standard"
         />
       </Box>
-    </div>
-  );
+      <div className='snack-image'>
+        <img src={BevImage} height={300} width={400} />
+      </div>
+    </div> 
+
+  )  
 }

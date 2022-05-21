@@ -19,7 +19,6 @@
 
 .App-header {
   background-color: #282c34;
-
   display: flex;
   flex-direction: column;
   /* align-items: center; */
@@ -31,7 +30,7 @@
 .pretty-calendar {
   margin: 0;
   padding: 10%;
-  background-image: url(/DevPics/IMG_0521.JPG);
+  background-image: url(./assets/images/IMG_0521.JPG);
   border: 10px solid #282c34;
   color: greenyellow;  
   background-size:contain;
@@ -39,11 +38,11 @@
 }
 
 .snack-selection {
-  background-color: white;
+  background-color: #E7D8F0;
   color: black;
-  border: black;
+  border: solid black;
   margin: 1px;
-  padding: 10%;
+  padding: 2%;
   display: flex;
   flex-direction: column;
   /* align-items: center; */
@@ -51,7 +50,10 @@
   font-size: calc(10px + 2vmin);
 }
 
-
+.snack-image {
+  display: flex;
+  
+}
 
 /* .App-link {
   color: #61dafb;
