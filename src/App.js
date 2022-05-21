@@ -17,15 +17,14 @@ function App() {
 
   return (
 
-
+    <BrowserRouter>
     <main>
       <div className='App-header'>
         <PrimaryNavbar /> 
         {/* <WelcomePage title = {welcomeTitle} /> */}
       </div>
       <div className='pretty-calendar'>
-        <BrowserRouter>
-          <PrimaryNavbar />
+        
           {/* <WelcomePage title = {welcomeTitle} /> */}
             <Routes>
               <Route path="/index" element={<Calendarview />}/> 
@@ -33,13 +32,13 @@ function App() {
               <Route path="/auth/sign-in" element={<UserSignIn />}/>
               <Route path="/auth/sign-up" element={<UserSignUp />}/>
             </Routes>  
-        </BrowserRouter>
+        
        
        
 
       </div>
     </main>
-   
+   </BrowserRouter>
   );
 }
 
