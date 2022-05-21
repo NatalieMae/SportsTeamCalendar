@@ -115,13 +115,22 @@ export default function PrimaryNavbar() {
               }}>
                 <Typography textAlign="center">Snacks</Typography>
               </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu}>
+              <MenuItem onClick={(e) => {
+                e.preventDefault();
+                window.location.href = "http://localhost:3000/";
+              }}>
                 <Typography textAlign="center">Your Team</Typography>
               </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu}>
+              <MenuItem onClick={(e) => {
+                e.preventDefault();
+                window.location.href = "http://localhost:3000/";
+              }}>
                 <Typography textAlign="center">Create Team</Typography>
               </MenuItem>
-              <MenuItem onClick={handleIndex}>
+              <MenuItem onClick={(e) => {
+                e.preventDefault();
+                window.location.href = "http://localhost:3000/index";
+              }}>
                 <Typography textAlign="center">Calendar</Typography>
               </MenuItem>
             </Menu>
@@ -154,19 +163,28 @@ export default function PrimaryNavbar() {
               Snacks
             </Button>
             <Button
-              onClick={handleCloseNavMenu}
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = "http://localhost:3000/";
+              }}
               sx={{ my: 2, color: "white", display: "block" }}
             >
               Your Team
             </Button>
             <Button
-              onClick={handleCloseNavMenu}
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = "http://localhost:3000/";
+              }}
               sx={{ my: 2, color: "white", display: "block" }}
             >
               Create Team
             </Button>
             <Button
-              onClick={handleIndex}
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = "http://localhost:3000/index";
+              }}
               sx={{ my: 2, color: "white", display: "block" }}
             >
               Calandar
@@ -195,16 +213,28 @@ export default function PrimaryNavbar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              <MenuItem onClick={handleCloseUserMenu}>
+              <MenuItem onClick={(e) => {
+                e.preventDefault();
+                window.location.href = "http://localhost:3000/";
+              }}>
                 <Typography textAlign="center">Profile</Typography>
               </MenuItem>
-              <MenuItem onClick={handleSignIn}>
+              <MenuItem onClick={(e) => {
+                e.preventDefault();
+                window.location.href = "http://localhost:3000/";
+              }}>
                 <Typography textAlign="center">Sign In</Typography>
               </MenuItem>
-              <MenuItem onClick={handleSignUp}>
+              <MenuItem onClick={(e) => {
+                e.preventDefault();
+                window.location.href = "http://localhost:3000/";
+              }}>
                 <Typography textAlign="center">Sign Up</Typography>
               </MenuItem>
-              <MenuItem onClick={handleCloseUserMenu}>
+              <MenuItem onClick={(e) => {
+                e.preventDefault();
+                window.location.href = "http://localhost:3000/";
+              }}>
                 <Typography textAlign="center">Logout</Typography>
               </MenuItem>
             </Menu>
