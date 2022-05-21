@@ -76,6 +76,12 @@ export default function PrimaryNavbar() {
   const home = () => {
     navigate("/");
   };
+  const nPlayer = () => {
+    navigate("new-player");
+  };
+  const nTeam = () => {
+    navigate("new-team");
+  };
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -134,9 +140,14 @@ export default function PrimaryNavbar() {
                 <Typography textAlign="center">Your Team</Typography>
               </MenuItem>
               <MenuItem
-                onClick={home}
+                onClick={nTeam}
               >
-                <Typography textAlign="center">Create Team</Typography>
+                <Typography textAlign="center">New Team</Typography>
+              </MenuItem>
+              <MenuItem
+                onClick={nPlayer}
+              >
+                <Typography textAlign="center">New Player</Typography>
               </MenuItem>
               <MenuItem onClick={calendar}>
                 <Typography textAlign="center">Calendar</Typography>
@@ -178,10 +189,16 @@ export default function PrimaryNavbar() {
               Your Team
             </Button>
             <Button
-              onClick={home}
+              onClick={nTeam}
               sx={{ my: 2, color: "white", display: "block" }}
             >
-              Create Team
+              New Team
+            </Button>
+            <Button
+              onClick={nPlayer}
+              sx={{ my: 2, color: "white", display: "block" }}
+            >
+              New Player
             </Button>
             <Button
               onClick={calendar}
