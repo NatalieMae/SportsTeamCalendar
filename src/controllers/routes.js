@@ -1,35 +1,50 @@
 require('dotenv').config()
-const router = require('express')
+const router = require('express').Router()
 const app = router ()
 
 
 //WELCOME PAGE
-app.get('/', (reg, res) => {
+router.get('/', (reg, res) => {
     console.log('Ahoy!')
     res.send('Index')
 })
 
 //SIGNUP
-app.get('/sign-up', (reg, res) => {
-    console.log('Ahoy!')
+router.get('/auth/sign-up', (reg, res) => {
+    res.send('Index')
+})
+
+router.post('/auth/sign-up', (reg, res) => {
     res.send('Index')
 })
 
 //SIGN-IN
-app.get('/sign-in', (reg, res) => {
-    console.log('Ahoy!')
+router.get('/auth/sign-in', (reg, res) => {
     res.send('Index')
 })
+
+router.post('/auth/sign-in', (reg, res) => {
+    res.send('Index')
+})
+
 //CALENDAR PAGE
-app.get('/index', (reg, res) => {
-    console.log('Ahoy!')
+router.get('/index', (reg, res) => {
     res.send('Index')
 })
 
 //SNACK SELECTION
-app.get('/', (reg, res) => {
-    console.log('Ahoy!')
+router.get('/snacks', (reg, res) => {
     res.send('Index')
 })
 
-app.listen(process.env.PORT)
+//EDIT
+router.get('/snacks', (reg, res) => {
+    res.send('Index')
+})
+
+//DELETE
+router.delete('/snacks', (reg, res) => {
+    res.send('Index')
+})
+
+module.export = router
