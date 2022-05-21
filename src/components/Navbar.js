@@ -16,9 +16,6 @@ import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 
 
-const pages = ['Snacks', 'Your Team', 'Create Team', 'Create Player', 'Events'];
-const settings = ['Profile', 'Sign Up', 'Sign In', 'Logout'];
-
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -63,6 +60,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function PrimaryNavbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  function handleSnacks() {
+    <Link to='/about'>Go to Aboutpage</Link>
+  };
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -112,12 +113,20 @@ export default function PrimaryNavbar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+              <MenuItem onClick={handleSnacks}>
+                  <Typography textAlign="center">Snacks</Typography>
+              </MenuItem>
+              <MenuItem onClick={handleOpenUserMenu}>
+                  <Typography textAlign="center">Your Team</Typography>
+              </MenuItem>
+              <MenuItem onClick={handleOpenUserMenu}>
+                  <Typography textAlign="center">Create Team</Typography>
+              </MenuItem>
+              <MenuItem onClick={handleOpenUserMenu}>
+                  <Typography textAlign="center">Events</Typography>
+              </MenuItem>
+              </Menu>
+              
           </Box>
           <Typography
             variant="h6"
@@ -137,15 +146,30 @@ export default function PrimaryNavbar() {
             />
           </Search>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
               <Button
-                key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                Snacks
               </Button>
-            ))}
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                Your Team
+              </Button>
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                Create Team
+              </Button>
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                Events
+              </Button>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
@@ -170,11 +194,18 @@ export default function PrimaryNavbar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                <MenuItem onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">Profile</Typography>
                 </MenuItem>
-              ))}
+                <MenuItem onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">Sign In</Typography>
+                </MenuItem>
+                <MenuItem onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">Sign Up</Typography>
+                </MenuItem>
+                <MenuItem onClick={handleCloseUserMenu}>
+                  <Typography textAlign="center">Logout</Typography>
+                </MenuItem>
             </Menu>
           </Box>
         </Toolbar>
