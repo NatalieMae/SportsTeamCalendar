@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
-
+import { Link } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -61,8 +61,25 @@ export default function PrimaryNavbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
-  function handleSnacks() {
-    <Link to='/about'>Go to Aboutpage</Link>
+  const handleSnacks = () => {
+      <div>
+          <Link to='/snacks'></Link>
+      </div>
+  };
+  const handleIndex = () => {
+      <div>
+          <Link to='/index'></Link>
+      </div>
+  };
+  const handleSignIn = () => {
+      <div>
+          <Link to='/auth/sign-in'></Link>
+      </div>
+  };
+  const handleSignUp = () => {
+      <div>
+          <Link to='/auth/sign-up'></Link>
+      </div>
   };
 
   const handleOpenNavMenu = (event) => {
@@ -116,14 +133,14 @@ export default function PrimaryNavbar() {
               <MenuItem onClick={handleSnacks}>
                   <Typography textAlign="center">Snacks</Typography>
               </MenuItem>
-              <MenuItem onClick={handleOpenUserMenu}>
+              <MenuItem onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">Your Team</Typography>
               </MenuItem>
-              <MenuItem onClick={handleOpenUserMenu}>
+              <MenuItem onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">Create Team</Typography>
               </MenuItem>
-              <MenuItem onClick={handleOpenUserMenu}>
-                  <Typography textAlign="center">Events</Typography>
+              <MenuItem onClick={handleIndex}>
+                  <Typography textAlign="center">Calendar</Typography>
               </MenuItem>
               </Menu>
               
@@ -165,10 +182,10 @@ export default function PrimaryNavbar() {
                 Create Team
               </Button>
               <Button
-                onClick={handleCloseNavMenu}
+                onClick={handleIndex}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                Events
+                Calandar
               </Button>
           </Box>
 
@@ -197,10 +214,10 @@ export default function PrimaryNavbar() {
                 <MenuItem onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">Profile</Typography>
                 </MenuItem>
-                <MenuItem onClick={handleCloseUserMenu}>
+                <MenuItem onClick={handleSignIn}>
                   <Typography textAlign="center">Sign In</Typography>
                 </MenuItem>
-                <MenuItem onClick={handleCloseUserMenu}>
+                <MenuItem onClick={handleSignUp}>
                   <Typography textAlign="center">Sign Up</Typography>
                 </MenuItem>
                 <MenuItem onClick={handleCloseUserMenu}>
