@@ -36,12 +36,6 @@ function AddPlayerForm(){
         console.log(e.target.value)
     }
 
-    // const handleData=({target})=>{
-    //     const{name,value} = target
-    //     console.log(name,value)
-    //     setSignUpCredentials({[name]: value})
-
-    // }
    
     return(
 
