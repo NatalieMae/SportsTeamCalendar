@@ -2,24 +2,26 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css';
 import PrimaryNavbar from './components/Navbar';
-import WelcomePage from './components/WelcomePage';
+// import WelcomePage from './components/WelcomePage';
 import UserSignUp from './components/UserSignUpForm';
 import UserSignIn from './components/userSignIn';
 import Calendarview from './components/Calendarview';
 import Snack from './components/Snack'
-// import {Calendar as ReactCalendar} from 'react-calendar';
-
+import AddPlayerForm from './components/AddPlayerForm';
 
 
 function App() {
 
-  const welcomeTitle = 'Welcome to the Food App'
+  // const welcomeTitle = 'Welcome to the Food App'
 
   return (
 
 
-    <div>
     <main>
+      <div className='App-header'>
+        <PrimaryNavbar /> 
+        {/* <WelcomePage title = {welcomeTitle} /> */}
+      </div>
       <div className='pretty-calendar'>
         <BrowserRouter>
           <PrimaryNavbar />
@@ -29,16 +31,13 @@ function App() {
               <Route path="/snacks" element={<Snack />}/>
               <Route path="/auth/sign-in" element={<UserSignIn />}/>
               <Route path="/auth/sign-up" element={<UserSignUp />}/>
-            </Routes>
-            
-          
-          
+            </Routes>  
         </BrowserRouter>
       </div>
     </main>
-
-    </div>
+   
   );
 }
 
 export default App;
+

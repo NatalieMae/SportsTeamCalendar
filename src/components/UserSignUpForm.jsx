@@ -23,7 +23,7 @@ function UserSignUp(){
         console.log('team selected')
     };
 
-    const [signUpCredentials, setSignUpCredentials] = useState({})
+    const [signUpCredentials, setSignUpCredentials] = useState(null)
 
 
     const handleData=({target})=>{

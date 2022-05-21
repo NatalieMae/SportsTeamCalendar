@@ -8,8 +8,7 @@ import Checkbox from '@mui/material/Checkbox';
 
 export default function Snack() {
   const [state, setState] = React.useState({
-    oranges: true,
-    bananas: false,
+    oranges: true,    bananas: false,
     apples: false,
     watermelon: false,
     water: true,
