@@ -8,6 +8,7 @@ import UserSignIn from './components/userSignIn';
 import Calendarview from './components/Calendarview';
 import Snack from './components/Snack'
 import Beverage from './components/Beverage'
+import AddPlayerForm from './components/AddPlayerForm';
 
 
 function App() {
@@ -17,7 +18,6 @@ function App() {
   return (
 
 
-    <div className='App'>
     <main>
       <div className='App-header'>
         <PrimaryNavbar /> 
@@ -32,7 +32,7 @@ function App() {
       <div className='snack-calendar'>
         <Snack />
         <Beverage />
-        </div>
+
     </main>
 
     </div>
