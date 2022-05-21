@@ -25,7 +25,6 @@ function App() {
       </div>
       <div className='pretty-calendar'>
         <BrowserRouter>
-          <PrimaryNavbar />
           {/* <WelcomePage title = {welcomeTitle} /> */}
             <Routes>
               <Route path="/index" element={<Calendarview />}/> 
