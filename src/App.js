@@ -7,6 +7,8 @@ import UserSignUp from './components/UserSignUpForm';
 import UserSignIn from './components/userSignIn';
 import Calendarview from './components/Calendarview';
 import Snack from './components/Snack'
+import AddPlayerForm from './components/AddPlayerForm';
+import NewTeamForm from './components/Addnewteam'
 
 
 
@@ -31,6 +33,8 @@ function App() {
               <Route path="/snacks" element={<Snack />}/>
               <Route path="/auth/sign-in" element={<UserSignIn />}/>
               <Route path="/auth/sign-up" element={<UserSignUp />}/>
+              <Route path="new-player" element={<NewTeamForm />}/>
+              <Route path="new-team" element={<AddPlayerForm />}/>
             </Routes>  
         
        
