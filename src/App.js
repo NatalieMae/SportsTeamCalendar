@@ -24,8 +24,6 @@ function App() {
       </div>
       <div className='pretty-calendar'>
         <BrowserRouter>
-          <PrimaryNavbar />
-          <WelcomePage title = {welcomeTitle} />
             <Routes>
               <Route path="/index" element={<Calendarview />}/> 
               <Route path="/snacks" element={<Snack />}/>
@@ -35,7 +33,7 @@ function App() {
         </BrowserRouter>
       </div>
     </main>
-   
+  
   );
 }
 
