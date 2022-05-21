@@ -7,7 +7,8 @@ import UserSignUp from './components/UserSignUpForm';
 import UserSignIn from './components/userSignIn';
 import Calendarview from './components/Calendarview';
 import Snack from './components/Snack'
-import AddPlayerForm from './components/AddPlayerForm';
+
+
 
 
 function App() {
@@ -16,24 +17,24 @@ function App() {
 
   return (
 
-
+    <BrowserRouter>
     <main>
       <div className='App-header'>
         <PrimaryNavbar /> 
         {/* <WelcomePage title = {welcomeTitle} /> */}
       </div>
       <div className='pretty-calendar'>
-        <BrowserRouter>
+
             <Routes>
               <Route path="/index" element={<Calendarview />}/> 
               <Route path="/snacks" element={<Snack />}/>
               <Route path="/auth/sign-in" element={<UserSignIn />}/>
               <Route path="/auth/sign-up" element={<UserSignUp />}/>
             </Routes>  
-        </BrowserRouter>
       </div>
     </main>
-  
+   </BrowserRouter>
+
   );
 }
 
