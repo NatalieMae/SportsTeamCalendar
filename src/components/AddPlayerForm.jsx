@@ -119,7 +119,6 @@ function AddPlayerForm(){
             </main>
 
     )
-    
 }
 
 export default AddPlayerForm;
