@@ -24,21 +24,17 @@ function App() {
         {/* <WelcomePage title = {welcomeTitle} /> */}
       </div>
       <div className='pretty-calendar'>
-        
-          {/* <WelcomePage title = {welcomeTitle} /> */}
+
             <Routes>
               <Route path="/index" element={<Calendarview />}/> 
               <Route path="/snacks" element={<Snack />}/>
               <Route path="/auth/sign-in" element={<UserSignIn />}/>
               <Route path="/auth/sign-up" element={<UserSignUp />}/>
             </Routes>  
-        
-       
-       
-
       </div>
     </main>
    </BrowserRouter>
+
   );
 }
 
