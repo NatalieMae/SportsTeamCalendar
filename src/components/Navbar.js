@@ -135,6 +135,10 @@ export default function PrimaryNavbar() {
               </MenuItem>
             </Menu>
           </Box>
+          <MenuItem onClick={(e) => {
+                e.preventDefault();
+                window.location.href = "http://localhost:3000/";
+              }}>
           <Typography
             variant="h6"
             noWrap
@@ -143,6 +147,7 @@ export default function PrimaryNavbar() {
           >
             SportsTeamCalendar
           </Typography>
+          </MenuItem>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
