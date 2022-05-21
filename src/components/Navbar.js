@@ -14,7 +14,7 @@ import MenuItem from "@mui/material/MenuItem";
 import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -60,6 +60,22 @@ export default function PrimaryNavbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
+  let navigate = useNavigate();
+  const calendar = () => {
+    navigate("/index");
+  };
+  const snacks = () => {
+    navigate("/snacks");
+  };
+  const signIn = () => {
+    navigate("/auth/sign-in");
+  };
+  const signUp = () => {
+    navigate("/auth/sign-up");
+  };
+  const home = () => {
+    navigate("/");
+  };
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -109,44 +125,35 @@ export default function PrimaryNavbar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              <MenuItem onClick={(e) => {
-                e.preventDefault();
-                window.location.href = "http://localhost:3000/snacks";
-              }}>
+              <MenuItem onClick={snacks}>
                 <Typography textAlign="center">Snacks</Typography>
               </MenuItem>
-              <MenuItem onClick={(e) => {
-                e.preventDefault();
-                window.location.href = "http://localhost:3000/";
-              }}>
+              <MenuItem
+                onClick={home}
+              >
                 <Typography textAlign="center">Your Team</Typography>
               </MenuItem>
-              <MenuItem onClick={(e) => {
-                e.preventDefault();
-                window.location.href = "http://localhost:3000/";
-              }}>
+              <MenuItem
+                onClick={home}
+              >
                 <Typography textAlign="center">Create Team</Typography>
               </MenuItem>
-              <MenuItem onClick={(e) => {
-                e.preventDefault();
-                window.location.href = "http://localhost:3000/index";
-              }}>
+              <MenuItem onClick={calendar}>
                 <Typography textAlign="center">Calendar</Typography>
               </MenuItem>
             </Menu>
           </Box>
-          <MenuItem onClick={(e) => {
-                e.preventDefault();
-                window.location.href = "http://localhost:3000/";
-              }}>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ display: { xs: "none", sm: "block" } }}
+          <MenuItem
+            onClick={home}
           >
-            SportsTeamCalendar
-          </Typography>
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{ display: { xs: "none", sm: "block" } }}
+            >
+              SportsTeamCalendar
+            </Typography>
           </MenuItem>
           <Search>
             <SearchIconWrapper>
@@ -159,37 +166,25 @@ export default function PrimaryNavbar() {
           </Search>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Button
-              onClick={(e) => {
-                e.preventDefault();
-                window.location.href = "http://localhost:3000/snacks";
-              }}
+              onClick={snacks}
               sx={{ my: 2, color: "white", display: "block" }}
             >
               Snacks
             </Button>
             <Button
-              onClick={(e) => {
-                e.preventDefault();
-                window.location.href = "http://localhost:3000/";
-              }}
+              onClick={home}
               sx={{ my: 2, color: "white", display: "block" }}
             >
               Your Team
             </Button>
             <Button
-              onClick={(e) => {
-                e.preventDefault();
-                window.location.href = "http://localhost:3000/";
-              }}
+              onClick={home}
               sx={{ my: 2, color: "white", display: "block" }}
             >
               Create Team
             </Button>
             <Button
-              onClick={(e) => {
-                e.preventDefault();
-                window.location.href = "http://localhost:3000/index";
-              }}
+              onClick={calendar}
               sx={{ my: 2, color: "white", display: "block" }}
             >
               Calandar
@@ -218,28 +213,24 @@ export default function PrimaryNavbar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              <MenuItem onClick={(e) => {
-                e.preventDefault();
-                window.location.href = "http://localhost:3000/";
-              }}>
+              <MenuItem
+                onClick={home}
+              >
                 <Typography textAlign="center">Profile</Typography>
               </MenuItem>
-              <MenuItem onClick={(e) => {
-                e.preventDefault();
-                window.location.href = "http://localhost:3000/auth/sign-in";
-              }}>
+              <MenuItem
+                onClick={signIn}
+              >
                 <Typography textAlign="center">Sign In</Typography>
               </MenuItem>
-              <MenuItem onClick={(e) => {
-                e.preventDefault();
-                window.location.href = "http://localhost:3000/auth/sign-up";
-              }}>
+              <MenuItem
+                onClick={signUp}
+              >
                 <Typography textAlign="center">Sign Up</Typography>
               </MenuItem>
-              <MenuItem onClick={(e) => {
-                e.preventDefault();
-                window.location.href = "http://localhost:3000/";
-              }}>
+              <MenuItem
+                onClick={home}
+              >
                 <Typography textAlign="center">Logout</Typography>
               </MenuItem>
             </Menu>
