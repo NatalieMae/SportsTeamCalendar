@@ -4,7 +4,7 @@ const app = router ()
 
 
 //WELCOME PAGE
-router.get('/', (reg, res) => {
+router.get('*', (reg, res) => {
     console.log('Ahoy!')
     res.send('Index')
 })
