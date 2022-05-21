@@ -221,7 +221,7 @@ export default function PrimaryNavbar() {
               </MenuItem>
               <MenuItem onClick={(e) => {
                 e.preventDefault();
-                window.location.href = "http://localhost:3000/";
+                window.location.href = "http://localhost:3000/auth/sign-in";
               }}>
                 <Typography textAlign="center">Sign In</Typography>
               </MenuItem>
