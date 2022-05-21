@@ -34,7 +34,6 @@ function AddPlayerForm(){
     const handleAllergicStatus =(e)=>{
         setAllergyStatus(e.target.value)
         console.log(e.target.value)
-
     }
 
     // const handleData=({target})=>{
@@ -114,7 +113,7 @@ function AddPlayerForm(){
                         <Button variant = 'contained' type="submit" size = "large">
                             Add New Player
                         </Button>
-                    
+                  
                     </Box>
                 </form>
             </main>
