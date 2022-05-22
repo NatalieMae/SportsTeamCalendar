@@ -10,9 +10,6 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(publicPath, 'index.html'));
 });
 
-app.get('/', (req, res) => {
-    res.send('Hello, world!')
-})
 
 app.listen(port, () => {
     console.log(`Server is up on port ${port} !`);
