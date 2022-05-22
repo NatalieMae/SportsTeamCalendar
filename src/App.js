@@ -8,6 +8,9 @@ import UserSignIn from './components/userSignIn';
 import Calendarview from './components/Calendarview';
 import Snack from './components/Snack'
 import AddPlayerForm from './components/AddPlayerForm';
+import NewTeamForm from './components/Addnewteam'
+
+
 
 
 function App() {
@@ -16,26 +19,26 @@ function App() {
 
   return (
 
-
+    <BrowserRouter>
     <main>
       <div className='App-header'>
         <PrimaryNavbar /> 
         {/* <WelcomePage title = {welcomeTitle} /> */}
       </div>
       <div className='pretty-calendar'>
-        <BrowserRouter>
-          <PrimaryNavbar />
-          <WelcomePage title = {welcomeTitle} />
+
             <Routes>
               <Route path="/index" element={<Calendarview />}/> 
               <Route path="/snacks" element={<Snack />}/>
               <Route path="/auth/sign-in" element={<UserSignIn />}/>
               <Route path="/auth/sign-up" element={<UserSignUp />}/>
+              <Route path="new-player" element={<NewTeamForm />}/>
+              <Route path="new-team" element={<AddPlayerForm />}/>
             </Routes>  
-        </BrowserRouter>
       </div>
     </main>
-   
+   </BrowserRouter>
+
   );
 }
 
