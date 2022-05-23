@@ -2,8 +2,6 @@
 import React, { useState } from "react";
 // import { render } from 'react-dom';
 import {Calendar as ReactCalendar} from 'react-calendar';
-// import DatePicker from 'sassy-datepickers';
-
 // import 'react-calendar/dis/Calendar.css';
 
 

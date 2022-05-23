@@ -17,16 +17,27 @@
 .Routes {
   align-items: center;
 }
+
 .pretty-calendar {
   margin: 0;
   padding: 10%;
-  background-image: url(./assets/images/IMG_0521.JPG);
-  border: 10px solid #282c34;
-
+  opacity: 1.5;
+  text-decoration: solid rgb(14, 23, 188);
   color: rgb(14, 23, 188);  
-  border-top-color: rgb(50, 50, 208);
-  border-right-color: rgb(50, 50, 288);
-  background-size:contain;
+}
+
+.pretty-calendar::after {
+  content: "";
+  background-image: url(./assets/images/IMG_0521.JPG);
+  /* HELP :) can't figure out how to make this only one image on the screen */
+  background-size: contain;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 .snack-selection {
@@ -43,26 +54,10 @@
 }
 
 .snack-image {
-
   display: inline;
-  
 }
 
 .snack-header {
   display: flex;
   flex-direction: column;
-
 }
-
-/* .App-link {
-  color: #61dafb;
-} */
-
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
