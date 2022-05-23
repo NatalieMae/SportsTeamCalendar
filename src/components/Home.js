@@ -5,9 +5,9 @@ export default function Home() {
 
     return(
         <div className='baseball-image'>
-            <img src={BaseballImage}  alt= 'baseball field'/> 
-            {/* BevImage source:  */}
-          </div>
+            <img src={BaseballImage}  alt= 'little league baseball'/> 
+            {/* BaseballImage source: https://unsplash.com/photos/Ql2n3JsUpww */}
+        </div>
 
     )
 
