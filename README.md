@@ -1,17 +1,23 @@
-Sports Teams App
-We decided to create this app as a way to organize a childs snack schedule for game day. Eveyone needs a snack after playing hard. 
+## Sports Teams App
 
-To use this application you will need to download all of your team names and schedules. Once that is done you will have the parents create an account and pick they team/teams they are associated with. Once you have your selected team the game roster will be added to the calendar attached to the app. 
 
-Once the schedule is added you can pick a game day and it should take you to a new page. This page will tell you the time of the game, what team you are playing against, home vs away status, field name/number, and an options to sign up for snack that day. 
+#### We created this app as a way for parent's to reserve a date to bring snack for their child's little league game. 
 
-Click on the snack option and you will be able to choose what type of snack you are bring to the game that day. 
+#### Everyone deserves a delicious snack after a playing hard
 
-We have used the following technology to create this app: 
-React
-Express
-Node
-Heroku
-PGAdmin
-Github 
-VSCode
+* To use this application you will need to download all of your team names and schedules into the app, once completed, parents can create an account that will show team(s) they are associated with and their game day rosters will show on the in-app calendar.
+
+* Once the schedule is added parents can pick a game day and it should take you to a new page. This page will tell you the time of the game, what team you are playing against, home vs away status, field name/number, and will have options to sign up for snack that day. 
+
+* Parents can click on an option from each category (snacks & beverages) and then click the submit button to add this selection to the calendar. 
+
+* There is additionally a delete button that can be utilized if a parent wants to change what they are bringing for snack or to remove themselves as the designated snack provider for that game date.
+
+### We have used the following technology to create this app: 
+* React
+* Express
+* Node.js
+* Heroku
+* pgAdmin
+* Github 
+* VSCode
