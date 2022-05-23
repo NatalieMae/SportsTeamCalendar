@@ -9,7 +9,7 @@ import Calendarview from './components/Calendarview';
 import Snack from './components/Snack'
 import AddPlayerForm from './components/AddPlayerForm';
 import NewTeamForm from './components/Addnewteam'
-
+import Home from './components/Home'
 
 
 
@@ -28,6 +28,7 @@ return (
       {/* <div className='pretty-calendar'> */}
       <div>
             <Routes>
+              <Route path="/" element={<Home />}/>
               <Route path="/index" element={<Calendarview />}/> 
               <Route path="/snacks" element={<Snack />}/>
               <Route path="/auth/sign-in" element={<UserSignIn />}/>
