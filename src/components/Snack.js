@@ -6,7 +6,10 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import BevImage from '../assets/images/bev-unsplash.jpg'
-
+import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
+import SendIcon from '@mui/icons-material/Send';
+import Stack from '@mui/material/Stack';
 
 export default function Snack() {
   const [state, setState] = React.useState({
@@ -116,6 +119,14 @@ export default function Snack() {
           <img src={BevImage} height={300} width={400} /> 
           {/* BevImage source: https://unsplash.com/photos/y2ZnTVlTo8E */}
         </div>
+        <Stack direction="row" spacing={2}>
+          <Button variant="contained" endIcon={<SendIcon />}>
+            Submit
+          </Button>
+          <Button variant="outlined" startIcon={<DeleteIcon />}>
+            Delete
+          </Button>
+        </Stack>
       </div>
     </div> 
 
