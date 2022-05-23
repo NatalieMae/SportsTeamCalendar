@@ -57,8 +57,15 @@
   left: 0;
 }
 
-.baseball-image .calendar-container {
+/* .baseball-image .calendar-container {
   opacity: .5;
+} */
+
+.sign-in {
+  background-color: white;
+  opacity: .7;
+  text-rendering: optimizeLegibility white;
+  position:absolute;
 }
 
 .snack-background {

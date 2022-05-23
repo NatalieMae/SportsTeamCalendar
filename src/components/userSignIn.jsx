@@ -23,7 +23,6 @@ const initialValues = {
             console.log(userCredentials)
 
         }
- 
     // Prevent submission
     const handleSubmit = (e)=>{
         e.preventDefault();
@@ -32,7 +31,7 @@ const initialValues = {
     }
     
     return( 
-
+    <div className="sign-in">
        <form  action="" onSubmit = {handleSubmit}>
         <Box  component="form"
             sx={{
@@ -69,8 +68,8 @@ const initialValues = {
 
         
        </form>
-    
-   
+
+       </div>
     )
 
    
