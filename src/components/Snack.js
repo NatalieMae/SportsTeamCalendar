@@ -120,10 +120,10 @@ export default function Snack() {
           {/* BevImage source: https://unsplash.com/photos/y2ZnTVlTo8E */}
         </div>
         <Stack direction="row" spacing={2}>
-          <Button variant="contained" endIcon={<SendIcon />}>
+          <Button onClick="" variant="contained" endIcon={<SendIcon />}>
             Submit
           </Button>
-          <Button variant="outlined" startIcon={<DeleteIcon />}>
+          <Button onClick="" variant="outlined" startIcon={<DeleteIcon />}>
             Delete
           </Button>
         </Stack>
