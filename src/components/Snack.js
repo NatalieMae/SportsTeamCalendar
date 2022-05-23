@@ -113,7 +113,7 @@ export default function Snack() {
           />
         </Box>
         <div className='snack-image'>
-          <img src={BevImage} height={300} width={400} /> 
+          <img src={BevImage} height={300} width={400} alt= 'Multiple different athletic beverages'/> 
           {/* BevImage source: https://unsplash.com/photos/y2ZnTVlTo8E */}
         </div>
       </div>

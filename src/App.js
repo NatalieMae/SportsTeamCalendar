@@ -25,8 +25,8 @@ return (
         <PrimaryNavbar /> 
         {/* <WelcomePage title = {welcomeTitle} /> */}
       </div>
-      <div className='pretty-calendar'>
-
+      {/* <div className='pretty-calendar'> */}
+      <div>
             <Routes>
               <Route path="/index" element={<Calendarview />}/> 
               <Route path="/snacks" element={<Snack />}/>
