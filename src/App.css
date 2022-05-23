@@ -31,7 +31,7 @@
   background-image: url(./assets/images/IMG_0521.JPG);
   /* HELP :) can't figure out how to make this only one image on the screen */
   background-size: contain;
-  opacity: 0.3;
+  opacity: 0.5;
   top: 0;
   left: 0;
   bottom: 0;
@@ -39,6 +39,14 @@
   position: absolute;
   z-index: -1;
 }
+
+/* .calendar-container {
+  background-color: #fefefe; 
+  display: flex;
+  align-content: center;
+  padding: .2%;
+  opacity: 1;
+} */
 
 .baseball-image {
   display: flex;
