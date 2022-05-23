@@ -21,6 +21,7 @@
 .pretty-calendar {
   margin: 0;
   padding: 10%;
+  position:absolute ;
   opacity: 1.5;
   text-decoration: solid rgb(14, 23, 188);
   color: rgb(14, 23, 188);  
@@ -29,14 +30,13 @@
 .pretty-calendar::after {
   content: "";
   background-image: url(./assets/images/IMG_0521.JPG);
-  /* HELP :) can't figure out how to make this only one image on the screen */
-  background-size: contain;
+  background-size: 58%;
   opacity: 0.5;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  position: absolute;
+  position:absolute;
   z-index: -1;
 }
 
@@ -55,6 +55,10 @@
   position: relative;
   top: 0;
   left: 0;
+}
+
+.baseball-image .calendar-container {
+  opacity: .5;
 }
 
 .snack-background {
