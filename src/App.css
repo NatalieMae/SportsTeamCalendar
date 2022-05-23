@@ -33,8 +33,9 @@
   background-image: url(./assets/images/IMG_0521.JPG);
   border: 10px solid #282c34;
   color: greenyellow;  
-  background-size:contain;
-
+  background-size: cover;
+  /* background-position: calc(75% - 20px) calc(59% - 10px);  */
+  background-size: contain;
 }
 
 .snack-selection {
@@ -44,15 +45,22 @@
   margin: 1px;
   padding: 2%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   /* align-items: center; */
   justify-content: center;
   font-size: calc(10px + 2vmin);
 }
 
 .snack-image {
-  display: flex;
+
+  display: inline;
   
+}
+
+.snack-header {
+  display: flex;
+  flex-direction: column;
+
 }
 
 /* .App-link {
