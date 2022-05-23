@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 // import { render } from 'react-dom';
 import {Calendar as ReactCalendar} from 'react-calendar';
-// import 'react-calendar/dis/Calendar.css';
+import '../Calendar.css';
+
 
 
 function Calendarview() {
@@ -15,19 +16,21 @@ function Calendarview() {
 
     return (
         <div className="pretty-calendar">
-        <h1>Game Day Information</h1>
-        <div className="calendar-container">
-        <ReactCalendar 
-                onChange={onChange} 
-                calendarType= 'US'
-                onViewChange={onChange}
-                maxDetail= 'month'
-                value={date}
-                minDate={new Date()}
-                minDetail='year' />
-                {console.log(date)}
-                {date.toString()}
-        </div>
+            <h1>Game Day Information</h1>
+            <div className="calendar-container">
+                <center>
+                    <ReactCalendar
+                            onChange={onChange} 
+                            calendarType= 'US'
+                            onViewChange={onChange}
+                            maxDetail= 'month'
+                            value={date}
+                            minDate={new Date()}
+                            minDetail='year' />
+                            {console.log(date)}
+                            {date.toString()}
+                </center>
+            </div>
         </div>
     );
 }
