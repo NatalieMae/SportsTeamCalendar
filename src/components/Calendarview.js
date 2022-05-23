@@ -1,8 +1,8 @@
 
 import React, { useState } from "react";
-// import { render } from 'react-dom';
 import {Calendar as ReactCalendar} from 'react-calendar';
 import '../Calendar.css';
+import Snack from "./Snack";
 
 
 
@@ -14,10 +14,18 @@ function Calendarview() {
         setDate(date);
       };
 
+    const [snackers, setSnackers] = useState(Snack);
+
+    // useEffect(() => {
+    // }
+    
+
+    
     return (
         <div className="pretty-calendar">
             <h1>Game Day Information</h1>
             <div className="calendar-container">
+              <button onClick={() => setSnackers(('/src/components/Snack.js'))}></button>
                 <center>
                     <ReactCalendar
                             onChange={onChange} 
@@ -32,7 +40,7 @@ function Calendarview() {
                 </center>
             </div>
         </div>
-    );
-}
+        )    
+}    
 
 export default Calendarview;
