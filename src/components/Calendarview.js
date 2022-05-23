@@ -1,33 +1,34 @@
 
-// import { Button, Popover } from "@mui/material";
-// import { render } from "@testing-library/react";
 import React, { useState } from "react";
+// import { render } from 'react-dom';
 import {Calendar as ReactCalendar} from 'react-calendar';
-import DatePicker from 'sassy-datepickers';
+// import DatePicker from 'sassy-datepickers';
 
 // import 'react-calendar/dis/Calendar.css';
 
 
 function Calendarview() {
 
-    const [date, setDate] = useState([
-        new Date(),
-    ]);
-      const onChange = (date) => {
-        console.log(date.toString());
+    const [date, setDate] = useState(new Date());
+
+    const onChange = (date) => {
+        setDate(date);
       };
 
     return (
         <div className="pretty-calendar">
-        <h1 className="text-center">Game Day Information</h1>
+        <h1>Game Day Information</h1>
         <div className="calendar-container">
-          <DatePicker onChange={onChange} />
         <ReactCalendar 
-                onChange={setDate} 
+                onChange={onChange} 
+                calendarType= 'US'
+                onViewChange={onChange}
+                maxDetail= 'month'
                 value={date}
                 minDate={new Date()}
-                minDetail='year'
-            />
+                minDetail='year' />
+                {console.log(date)}
+                {date.toString()}
         </div>
         </div>
     );

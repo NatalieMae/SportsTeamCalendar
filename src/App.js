@@ -17,9 +17,9 @@ function App() {
 
   // const welcomeTitle = 'Welcome to the Food App'
 
-  return (
-
-    <BrowserRouter>
+return (
+  <div className='App'>
+  <BrowserRouter>
     <main>
       <div className='App-header'>
         <PrimaryNavbar /> 
@@ -37,8 +37,8 @@ function App() {
             </Routes>  
       </div>
     </main>
-   </BrowserRouter>
-
+  </BrowserRouter>
+  </div>
   );
 }
 

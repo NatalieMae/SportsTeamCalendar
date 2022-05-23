@@ -1,39 +1,31 @@
 .App {
- 
   margin: 0;
   text-align: center;
-
-
+  align-items: center;
 }
-
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-} */
-
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
 
 .App-header {
   background-color: #282c34;
 
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+  align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: blue;
 }
 
+.Routes {
+  align-items: center;
+}
 .pretty-calendar {
   margin: 0;
   padding: 10%;
   background-image: url(/DevPics/IMG_0521.JPG);
   border: 10px solid #282c34;
-  color: greenyellow;  
+  color: rgb(14, 23, 188);  
+  border-top-color: rgb(50, 50, 208);
+  border-right-color: rgb(50, 50, 288);
   background-size:contain;
 
 }
