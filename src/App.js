@@ -19,6 +19,7 @@ function App() {
 
 return (
   <div className='App'>
+  {/* https://www.digitalocean.com/community/tutorials/how-to-handle-routing-in-react-apps-with-react-router */}
   <BrowserRouter>
     <main>
       <div className='App-header'>
