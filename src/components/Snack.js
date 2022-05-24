@@ -10,8 +10,10 @@ import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
 import Stack from '@mui/material/Stack';
+import CalendarView from './Calendarview'
 
-export default function Snack() {
+
+export default function Snack(props) {
   const [state, setState] = React.useState({
     oranges: false,    
     bananas: false,
@@ -29,6 +31,14 @@ export default function Snack() {
       [event.target.name]: event.target.checked,
     });
   };
+
+  const handleSnackSubmit = (e) => {
+    //<CalendarView.reserveChosenDate()
+    // after this is called, date pass in would be added to list of reserved dates 
+    //currently inside of calendar component
+    //props.date and snack selections and ultimately send to db
+    //for now props.date route to reservedChosenDate
+  }
 
   const { oranges, bananas, apples, watermelon, water, gatorade, lemonade, juice } = state;
   const error = [oranges, bananas, apples, watermelon, water, gatorade, lemonade, juice].filter((v) => v).length !== 1;
@@ -121,10 +131,10 @@ export default function Snack() {
             {/* BevImage source: https://unsplash.com/photos/y2ZnTVlTo8E */}
           </div>
           <Stack direction="row" spacing={2}>
-            <Button onClick="" variant="contained" endIcon={<SendIcon />}>
+            <Button onClick={handleSnackSubmit} variant="contained" endIcon={<SendIcon />}>
               Submit
             </Button>
-            <Button onClick="" variant="outlined" startIcon={<DeleteIcon />}>
+            <Button onClick={() => { console.log("onClick")}} variant="outlined" startIcon={<DeleteIcon />}>
               Delete
             </Button>
           </Stack>

@@ -68,7 +68,8 @@ function AddPlayerForm(){
                         maxLength = {10}
                         />
                         <TextField id="Date of Birth" 
-                        label="Date of Birth" 
+                        label="Date of Birth"
+                        InputLabelProps={{ shrink: true }} 
                         variant="outlined"
                         name="playerDOB"
                         type='date'
