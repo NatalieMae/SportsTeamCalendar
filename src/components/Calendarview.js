@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import {Calendar as ReactCalendar} from 'react-calendar';
 import '../Calendar.css';
 import Snack from "./Snack";
-
+import { useNavigate } from "react-router-dom";
 
 
 function Calendarview() {
-
+    let navigate = useNavigate();
+    const snackers = () => {
+    navigate("/snacks");
+    };
     const [date, setDate] = useState(new Date());
     const [chosenDate, reserveChosenDate] = useState([])
     const onChange = (date) => {
@@ -18,7 +21,7 @@ function Calendarview() {
 
     }
 
-    const [snackers, setSnackers] = useState(Snack);
+    //const [snackers, setSnackers] = useState(Snack);
 
     // useEffect(() => {
     // }
@@ -28,8 +31,7 @@ function Calendarview() {
     return (
         <div className="pretty-calendar">
             <h1>Game Day Information</h1>
-            <div className="calendar-container">
-              <button onClick={() => setSnackers(('/src/components/Snack.js'))}></button>
+            <div className="calendar-container" onClick={snackers}>
                 <center>
                     <ReactCalendar
                         onSelect={dateSelected}
