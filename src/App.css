@@ -67,6 +67,7 @@
 }
 
 .snack-background {
+  /* gummy_worm image source: https://unsplash.com/photos/PL5FZkW0Qkk */
   background: url(./assets/images/gummy_worms.jpg) no-repeat center; 
   min-height: 100%;
   min-width: 1024px;

@@ -17,6 +17,7 @@ function Calendarview() {
       };
     const dateSelected = (date) => {
         console.log(date)
+        // https://javascript.plainenglish.io/how-to-add-to-an-array-in-react-state-3d08ddb2e1dc
         reserveChosenDate(chosenDate => chosenDate.concat(date))
 
     }
