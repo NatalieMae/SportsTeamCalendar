@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import {Calendar as ReactCalendar} from 'react-calendar';
 import '../Calendar.css';
@@ -9,10 +8,15 @@ import Snack from "./Snack";
 function Calendarview() {
 
     const [date, setDate] = useState(new Date());
-
+    const [chosenDate, reserveChosenDate] = useState([])
     const onChange = (date) => {
-        setDate(date);
+        setDate(date);   
       };
+    const dateSelected = (date) => {
+        console.log(date)
+        reserveChosenDate(chosenDate => chosenDate.concat(date))
+
+    }
 
     const [snackers, setSnackers] = useState(Snack);
 
@@ -28,15 +32,16 @@ function Calendarview() {
               <button onClick={() => setSnackers(('/src/components/Snack.js'))}></button>
                 <center>
                     <ReactCalendar
-                            onChange={onChange} 
-                            calendarType= 'US'
-                            onViewChange={onChange}
-                            maxDetail= 'month'
-                            value={date}
-                            minDate={new Date()}
-                            minDetail='year' />
-                            {console.log(date)}
-                            {date.toString()}
+                        onSelect={dateSelected}
+                        onChange={onChange} 
+                        calendarType= 'US'
+                        onViewChange={onChange}
+                        maxDetail= 'month'
+                        value={date}
+                        minDate={new Date()}
+                        minDetail='year' />
+                        {console.log(date)}
+                        {date.toString()}
                 </center>
             </div>
         </div>

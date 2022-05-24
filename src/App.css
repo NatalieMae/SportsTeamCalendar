@@ -28,7 +28,7 @@
 .pretty-calendar::after {
   content: "";
   background-image: url(./assets/images/IMG_0521.JPG);
-  background-size: 58%;
+  background-size: 40%;
   opacity: 0.5;
   top: 0;
   left: 0;

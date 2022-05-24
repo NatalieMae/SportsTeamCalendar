@@ -134,19 +134,14 @@ export default function PrimaryNavbar() {
               <MenuItem onClick={snacks}>
                 <Typography textAlign="center">Snacks</Typography>
               </MenuItem>
-              <MenuItem
-                onClick={home}
-              >
+              <MenuItem onClick={home}>
                 <Typography textAlign="center">Your Team</Typography>
               </MenuItem>
-              <MenuItem
-                onClick={nTeam}
-              >
+              <MenuItem onClick={nTeam}>
                 <Typography textAlign="center">New Team</Typography>
               </MenuItem>
-              <MenuItem
-                onClick={nPlayer}
-              >
+
+              <MenuItem onClick={nPlayer}>
                 <Typography textAlign="center">New Player</Typography>
               </MenuItem>
               <MenuItem onClick={calendar}>
@@ -154,9 +149,7 @@ export default function PrimaryNavbar() {
               </MenuItem>
             </Menu>
           </Box>
-          <MenuItem
-            onClick={home}
-          >
+          <MenuItem onClick={home}>
             <Typography
               variant="h6"
               noWrap
@@ -204,7 +197,7 @@ export default function PrimaryNavbar() {
               onClick={calendar}
               sx={{ my: 2, color: "white", display: "block" }}
             >
-              Calandar
+              Calendar
             </Button>
           </Box>
 
@@ -230,24 +223,16 @@ export default function PrimaryNavbar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              <MenuItem
-                onClick={home}
-              >
+              <MenuItem onClick={home}>
                 <Typography textAlign="center">Profile</Typography>
               </MenuItem>
-              <MenuItem
-                onClick={signIn}
-              >
+              <MenuItem onClick={signIn}>
                 <Typography textAlign="center">Sign In</Typography>
               </MenuItem>
-              <MenuItem
-                onClick={signUp}
-              >
+              <MenuItem onClick={signUp}>
                 <Typography textAlign="center">Sign Up</Typography>
               </MenuItem>
-              <MenuItem
-                onClick={home}
-              >
+              <MenuItem onClick={home}>
                 <Typography textAlign="center">Logout</Typography>
               </MenuItem>
             </Menu>
